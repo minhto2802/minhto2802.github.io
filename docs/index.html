@@ -1,7 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minh (Nguyen Nhat) To</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+            color: #444;
+        }
 
-<h1>Hello world</h1>
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
 
+        .photo {
+            flex-shrink: 0;
+        }
+
+
+        /*.photo img {*/
+        /*    width: 180px;*/
+        /*    border-radius: 10px;*/
+        /*}*/
+
+        .photo img {
+            width: 220px; /* increase width */
+            height: 400px; /* control height explicitly */
+            object-fit: cover; /* crop and fill without distortion */
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.1em;
+            font-weight: normal;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+
+        a {
+            color: #e67e22;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .icons {
+            margin-top: 1.5rem;
+        }
+
+        .icons a {
+            margin-right: 10px;
+            color: #444;
+            font-size: 1.5rem;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: #eee;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .icons a:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="photo">
+        <img src="figures/profile.jpeg" alt="Minh To">
+    </div>
+    <div class="content">
+        <h1>Minh (Nguyen Nhat) To</h1>
+        <h2>PhD Candidate in Electrical and Computer Engineering at UBC</h2>
+
+        <p>
+            I am a PhD Candidate at the University of British Columbia supervised by
+            <a href="https://www.cs.queensu.ca/people/Parvin/Mousavi">Parvin Mousavi</a> and
+            <a href="https://people.ece.ubc.ca/purang/">Purang Abolmaesumi</a>. My research focuses on developing
+            robust machine learning models for medical imaging, especially in ultrasound and MRI. Previously, I
+            completed
+            my MSc at Sejong University under
+            <a href="https://www.kwaklab.net/PI.html">Prof. Jin Tae Kwak</a>, and my BSc at Vietnam National University.
+        </p>
+
+        <p>
+            I interned at the Vector Institute under
+            <a href="https://www.cs.toronto.edu/~rahulgk/">Rahul G. Krishnan</a>, and have research
+            experience across institutions in Canada, Korea, and Vietnam.
+        </p>
+
+        <div class="icons">
+            <a href="mailto:tnnhatminh@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.ca/citations?user=-oSQmxwAAAAJ" title="Google Scholar"><i
+                    class="fas fa-graduation-cap"></i></a>
+            <a href="https://github.com/minhto2802" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/minhto2802/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <!--        <a href="https://twitter.com" title="Twitter"><i class="fab fa-twitter"></i></a>-->
+        </div>
+    </div>
+</div>
+
+</body>
 </html>
-

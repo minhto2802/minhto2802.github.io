@@ -2,17 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Minh Nguyen Nhat To – PhD Candidate in AI for Medical Imaging at UBC. Research in ultrasound, prostate cancer, robustness, and deep learning, fairness.">
     <title>Minh (Nguyen Nhat) To</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: 'Helvetica Neue', sans-serif;
             max-width: 900px;
-            margin: 40px auto;
+            margin: 60px auto;
             padding: 0 20px;
             line-height: 1.6;
             color: #444;
         }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.6rem 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #e67e22;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #e67e22;
+  text-decoration: underline;
+}
+
 
         .container {
             display: flex;
@@ -20,26 +66,17 @@
             gap: 30px;
         }
 
-        .photo {
-            flex-shrink: 0;
-        }
-
-
-        /*.photo img {*/
-        /*    width: 180px;*/
-        /*    border-radius: 10px;*/
-        /*}*/
-
         .photo img {
-            width: 220px; /* increase width */
-            height: 400px; /* control height explicitly */
-            object-fit: cover; /* crop and fill without distortion */
+            width: 220px;
+            height: 400px;
+            object-fit: cover;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .content {
             flex: 1;
+            text-align: left;
         }
 
         h1 {
@@ -49,14 +86,18 @@
         }
 
         h2 {
-            font-size: 1.1em;
-            font-weight: normal;
-            color: #666;
-            margin-top: 5px;
+            font-size: 1.6rem;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 1rem;
+            padding-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        p {
-            margin-top: 1rem;
+        .section-icon {
+            font-size: 1.3rem;
+            color: #e67e22;
         }
 
         a {
@@ -89,30 +130,193 @@
         .icons a:hover {
             background-color: #ccc;
         }
+
+        .section {
+            margin-top: 2.5rem;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+
+        .item-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .item-right {
+            white-space: nowrap;
+            text-align: right;
+            color: #888;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+
+        .pub-section {
+            margin-top: 3rem;
+        }
+
+        .pub-entry {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pub-text {
+            flex: 1;
+        }
+
+        .pub-image {
+            flex: 1.5;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        .pub-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pub-image img:hover {
+            transform: scale(3);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .pub-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .pub-meta {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 0.3rem;
+        }
+
+        .pub-links a {
+            font-weight: bold;
+            color: #e67e22;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        .pub-links a:hover {
+            text-decoration: underline;
+        }
+
+        #toggle-icon {
+            transition: transform 0.3s ease;
+            width: 28px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .pub-entry {
+                flex-direction: column;
+            }
+
+            .item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-right {
+                text-align: left;
+                margin-top: 0.3rem;
+            }
+
+            .pub-image {
+                max-width: 100%;
+            }
+        }
+
+        .red-link {
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .red-link:hover {
+            text-decoration: underline;
+        }
+
+        .blue-link {
+            color: black;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .blue-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
-<body>
+<body id="about">
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-name">Minh To</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </div>
+</nav>
 
 <div class="container">
     <div class="photo">
-        <img src="figures/profile.jpeg" alt="Minh To">
+        <img src="figures/profiles/profile.jpeg" alt="Minh To">
     </div>
     <div class="content">
         <h1>Minh (Nguyen Nhat) To</h1>
         <h2>PhD Candidate in Electrical and Computer Engineering at UBC</h2>
 
         <p>
-            I am a PhD Candidate at the University of British Columbia supervised by
+            I am a PhD Candidate at the <a href="https://www.ubc.ca/" class="blue-link" target="_blank">University of
+            British Columbia</a>
+            supervised by
             <a href="https://www.cs.queensu.ca/people/Parvin/Mousavi">Parvin Mousavi</a> and
             <a href="https://people.ece.ubc.ca/purang/">Purang Abolmaesumi</a>. My research focuses on developing
             robust machine learning models for medical imaging, especially in ultrasound and MRI. Previously, I
             completed
-            my MSc at Sejong University under
-            <a href="https://www.kwaklab.net/PI.html">Prof. Jin Tae Kwak</a>, and my BSc at Vietnam National University.
+            my MSc in computer science at Sejong University under
+            <a href="https://www.kwaklab.net/PI.html">Jin Tae Kwak</a>, and my BSc at Vietnam National University.
         </p>
 
         <p>
-            I interned at the Vector Institute under
+            I interned at the <a href="https://vectorinstitute.ai/" class="red-link" target="_blank">Vector
+            Institute</a>
+            under
             <a href="https://www.cs.toronto.edu/~rahulgk/">Rahul G. Krishnan</a>, and have research
             experience across institutions in Canada, Korea, and Vietnam.
         </p>
@@ -128,5 +332,351 @@
     </div>
 </div>
 
+<div class="pub-section" id="publications">
+    <h2><i class="fa-solid fa-file-lines section-icon"></i> Publications</h2>
+    <p><i>Some of my publications are listed here.</i></p>
+
+    <!-- Publication 1 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">Diverse Prototypical Ensembles Improve Robustness to Subpopulation Shift
+            </div>
+            <div class="pub-authors">
+                <strong>Minh Nguyen Nhat To</strong>, Paul F R Wilson, Viet Nguyen, Mohamed Harmanani, Michael
+                Cooper, Fahimeh Fooladgar, Purang Abolmaesumi, Parvin Mousavi, Rahul G. Krishnan
+            </div>
+            <div class="pub-venue">International Conference on Machine Learning (ICML), 2025</div>
+            <div class="pub-meta">Acceptance rate: 26%</div>
+            <div class="pub-links">
+                <a href="https://openreview.net/forum?id=qUTiOeM57J" target="_blank">Paper</a>
+                <a href="https://minhto2802.github.io/diversified_prototypical_ensemble/" target="_blank">Summary</a>
+                <a href="https://github.com/minhto2802/DPE" target="_blank">Code</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/icml2025_v1.png" alt="ICML figure">
+        </div>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">Manifold DivideMix: A Semi-Supervised Contrastive Learning Framework for Severe Label
+                Noise
+            </div>
+            <div class="pub-authors">
+                Fahimeh Fooladgar, <strong>Minh Nguyen Nhat To</strong>, Parvin Mousavi, Purang Abolmaesumi
+            </div>
+            <div class="pub-venue">CVPR Workshops, 2024</div>
+            <div class="pub-meta">Presented at CVPR-VAND Workshop.</div>
+            <div class="pub-links">
+                <a href="https://openaccess.thecvf.com/content/CVPR2024W/VAND/papers/Fooladgar_Manifold_DivideMix_A_Semi-Supervised_Contrastive_Learning_Framework_for_Severe_Label_CVPRW_2024_paper.pdf"
+                   target="_blank">Paper</a>
+                <a href="https://openaccess.thecvf.com/content/CVPR2024W/VAND/supplemental/Fooladgar_Manifold_DivideMix_A_CVPRW_2024_supplemental.pdf"
+                   target="_blank">Supplementary</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/cvpr2024.png" alt="CVPR figure">
+        </div>
+    </div>
+
+    <!-- IJCARS 2024 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">Lensepro: Label Noise-Tolerant Prototype-Based Network For Improving Cancer Detection
+                In Prostate Ultrasound With Limited Annotations
+            </div>
+            <div class="pub-authors">
+                <strong>Minh Nguyen Nhat To</strong>, Fahimeh Fooladgar, Paul F R Wilson, Mohamed Harmanani, M Gilany,
+                Sojoudi S, A Jamzad, S Chang, P Black, Parvin Mousavi, Purang Abolmaesumi
+            </div>
+            <div class="pub-venue">International Journal of Computer Assisted Radiology and Surgery (IJCARS), Journal
+                (2024)
+            </div>
+            <div class="pub-links">
+                <a href="https://link.springer.com/article/10.1007/s11548-024-03104-3" target="_blank">Paper</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/lensepro2024.png" alt="LensePro 2024">
+        </div>
+    </div>
+
+    <!-- MICCAI 2024 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">ProstNFound: Integrating Foundation Models with Ultrasound Domain Knowledge and
+                Clinical Context for Robust Prostate Cancer Detection
+            </div>
+            <div class="pub-authors">
+                Paul F R Wilson, <strong>Minh Nguyen Nhat To</strong>, A Jamzad, M Gilany, Mohamed Harmanani, T
+                Elghareb, Fahimeh Fooladgar, B Wodlinger, Purang Abolmaesumi, Parvin Mousavi
+            </div>
+            <div class="pub-venue">MICCAI, Conference (2024)</div>
+            <div class="pub-meta"> Early Accept (Top 11%); Received <i>"MICCAI Young Scientist Award"</i>.</div>
+            <div class="pub-links">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-72089-5_47" target="_blank">Paper</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/prostnfound2024.png" alt="ProstNFound 2024">
+        </div>
+    </div>
+
+    <!-- IJCARS 2024 -->
+    <!--    <div class="pub-entry">-->
+    <!--        <div class="pub-text">-->
+    <!--            <div class="pub-title">TRUSWorthy: toward clinically applicable deep learning for confident detection of-->
+    <!--                prostate cancer in micro-ultrasound-->
+    <!--            </div>-->
+    <!--            <div class="pub-authors">-->
+    <!--                Mohamed Harmanani, Paul F R Wilson, <strong>Minh Nguyen Nhat To</strong>, M Gilany, A Jamzad, Fahimeh-->
+    <!--                Fooladgar, B Wodlinger, Purang Abolmaesumi, Parvin Mousavi-->
+    <!--            </div>-->
+    <!--            <div class="pub-venue">International Journal of Computer Assisted Radiology and Surgery (IJCARS), Journal-->
+    <!--                (2024)-->
+    <!--            </div>-->
+    <!--            <div class="pub-links">-->
+    <!--                <a href="https://link.springer.com/article/10.1007/s11548-025-03335-y" target="_blank">Paper</a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="pub-image">-->
+    <!--            <img src="figures/projects/trusworthy2024.png" alt="TRUSWorthy 2024">-->
+    <!--        </div>-->
+    <!--    </div>-->
+
+
+    <!-- IJCARS 2022 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">Coarse Label Refinement For Improving Prostate Cancer Detection In Ultrasound
+                Imaging
+            </div>
+            <div class="pub-authors">
+                <strong>Minh Nguyen Nhat To</strong>, Fahimeh Fooladgar, et al.
+            </div>
+            <div class="pub-venue">IJCARS, Journal (2022)</div>
+            <div class="pub-meta">Oral Presentation at IPCAI 2022.</div>
+
+            <div class="pub-links">
+                <a href="https://link.springer.com/article/10.1007/s11548-022-02606-2" target="_blank">Paper</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/ilr2022.png" alt="IJCARS 2022">
+        </div>
+    </div>
+
+    <!-- MICCAI 2020 -->
+    <div class="pub-entry">
+        <div class="pub-text">
+            <div class="pub-title">Improving Dense Pixelwise Prediction of Epithelial Density Using Unsupervised
+                Data
+                Augmentation for Consistency Regularization
+            </div>
+            <div class="pub-authors">
+                <strong>Minh Nguyen Nhat To</strong>, et al.
+            </div>
+            <div class="pub-venue">MICCAI, Conference (2020)</div>
+            <div class="pub-meta">Acceptance rate: 30%; <i>Oral Presentation</i></div>
+            <div class="pub-links">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-030-59710-8_56" target="_blank">Paper</a>
+            </div>
+        </div>
+        <div class="pub-image">
+            <img src="figures/projects/miccai2020.png" alt="MICCAI 2020">
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 1rem;">
+        <img id="toggle-icon" src="figures/icons/toggle.png" alt="Toggle Publications" onclick="togglePublications()"
+             style="width: 28px; cursor: pointer;"/>
+    </div>
+
+    <div id="older-publications" style="display: none;">
+        <!-- IJCARS 2020 -->
+        <div class="pub-entry">
+            <div class="pub-text">
+                <div class="pub-title">Deep Regression Neural Networks For Collateral Imaging From Dynamic
+                    Susceptibility
+                    Contrast-Enhanced Magnetic Resonance Perfusion In Acute Ischemic Stroke
+                </div>
+                <div class="pub-authors">
+                    <strong>Minh Nguyen Nhat To</strong>, Jin Tae Kwak, et al.
+                </div>
+                <div class="pub-venue">IJCARS, Journal (2020)</div>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/article/10.1007/s11548-019-02060-7" target="_blank">Paper</a>
+                </div>
+            </div>
+            <div class="pub-image">
+                <img src="figures/projects/ijcars2020.png" alt="IJCARS 2020">
+            </div>
+        </div>
+
+        <!-- MIA 2019 -->
+        <div class="pub-entry">
+            <div class="pub-text">
+                <div class="pub-title">Bach: Grand Challenge On Breast Cancer Histology Images</div>
+                <div class="pub-authors">
+                    Aresta G, Araújo T, Kwok S, <strong>Minh Nguyen Nhat To</strong>, et al.
+                </div>
+                <div class="pub-venue">Medical Image Analysis (MIA), Journal (2019)</div>
+                <div class="pub-links">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S1361841518307941"
+                       target="_blank">Paper</a>
+                </div>
+            </div>
+            <div class="pub-image">
+                <img src="figures/projects/bach2019.png" alt="BACH Challenge">
+            </div>
+        </div>
+
+        <!-- IJCARS 2018 -->
+        <div class="pub-entry">
+            <div class="pub-text">
+                <div class="pub-title">Deep Dense Multipath Neural Network For Prostate Segmentation In Magnetic
+                    Resonance
+                    Imaging
+                </div>
+                <div class="pub-authors">
+                    <strong>Minh Nguyen Nhat To</strong>, Vu DQ, Turkbey B, Choyke PL, Kwak JT
+                </div>
+                <div class="pub-venue">IJCARS, Journal (2018)</div>
+                <div class="pub-links">
+                    <a href="https://link.springer.com/article/10.1007/s11548-018-1841-4" target="_blank">Paper</a>
+                </div>
+            </div>
+            <div class="pub-image">
+                <img src="figures/projects/ijcars2018.png" alt="Prostate Segmentation">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="section" id="education">
+    <h2><i class="fa-solid fa-user-graduate section-icon"></i> Education</h2>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>University of British Columbia</strong><br>
+            PhD in Electrical and Computer Engineering<br>
+            <em>Graduate Support Initiative Awards, Machine Learning in CAI Award – Runner Up</em>
+        </div>
+        <div class="item-right">2020 – 2025 (expected)</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Sejong University, South Korea</strong><br>
+            MSc in Computer Science and Engineering<br>
+            <em>Graduate Research Fellowship</em>
+        </div>
+        <div class="item-right">2017 – 2019</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Vietnam National University – International University</strong><br>
+            BSc in Biomedical Engineering<br>
+            <em>Student Research Accomplishment with Distinction</em>
+        </div>
+        <div class="item-right">2010 – 2014</div>
+    </div>
+</div>
+
+
+<div class="section" id="experience">
+    <h2><i class="fa-solid fa-briefcase section-icon"></i> Experience</h2>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Vector Institute, Canada</strong><br>
+            Research Intern<br>
+            <em>Project: Detecting distribution shift in medical imaging<br>
+                Supervisors: Rahul G. Krishnan, Parvin Mousavi</em>
+        </div>
+        <div class="item-right">Jan – Apr 2024</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>University of British Columbia</strong><br>
+            Research Assistant, Robotics and Control Lab<br>
+            <em>Project: AI for prostate cancer detection in ultrasound imaging<br>
+                Supervisors: Purang Abolmaesumi, Parvin Mousavi</em>
+        </div>
+        <div class="item-right">2020 – Present</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>University of British Columbia</strong><br>
+            Teaching Assistant<br>
+            <em>Courses: System Software Engineering (CPEN 333), CPSC 160</em>
+        </div>
+        <div class="item-right">2021 – 2025</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Konkuk University Hospital, South Korea</strong><br>
+            Researcher<br>
+            <em>Project: Stroke diagnosis via magnetic resonance angiography<br>
+                Supervisors: Hong Gee Roh, Jin Tae Kwak</em>
+        </div>
+        <div class="item-right">2020</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Sejong University, South Korea</strong><br>
+            Research Assistant, Quantitative Imaging & Informatics Lab<br>
+            <em>Projects: Deep learning for prostate cancer and ischemic stroke imaging</em>
+        </div>
+        <div class="item-right">2017 – 2020</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Tan Tao University, Vietnam</strong><br>
+            Research Assistant<br>
+            <em>Project: Subcortical volume vs reasoning performance; dual-task fMRI</em>
+        </div>
+        <div class="item-right">2014 – 2016</div>
+    </div>
+
+    <div class="item">
+        <div class="item-left">
+            <strong>Conference & Journal Reviewer</strong><br>
+            <em>Reviewed for CVPR, MICCAI, ISBI, IEEE TPAMI, and other top-tier venues in computer vision and medical
+                imaging.</em>
+        </div>
+        <div class="item-right">2017 – Present</div>
+    </div>
+</div>
+
+<div class="section" id="skills">
+    <h2><i class="fa-solid fa-gears section-icon"></i> Skills</h2>
+
+    <p><strong>Programming:</strong> Python, SQL, R, TypeScript, C, C++, C#</p>
+    <p><strong>Frameworks & Libraries:</strong> PyTorch, scikit-learn, Keras, NumPy, Pandas, SciPy, TensorFlow, Seaborn,
+        Matlab</p>
+    <p><strong>Toolbox & Platforms:</strong> Google Dataflow, AWS, Linux, vim, git, zsh, Jupyter, OpenCV</p>
+</div>
+
+<script>
+    let showingMore = false;
+
+    function togglePublications() {
+        const section = document.getElementById('older-publications');
+        const icon = document.getElementById('toggle-icon');
+        showingMore = !showingMore;
+        section.style.display = showingMore ? 'block' : 'none';
+        icon.style.transform = showingMore ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+</script>
 </body>
 </html>
